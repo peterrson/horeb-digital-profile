@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 :root {
     --primary-color: #00251d;
     --accent-color: #014d3b;
@@ -11,6 +14,7 @@ body {
     margin: 0;
     background: linear-gradient(to bottom, #f4f7f6, #e9f1ef);
     color: #333;
+     overflow-x: hidden;
 }
 
 header {
@@ -35,8 +39,9 @@ header p {
 section {
     padding: 40px 5%;
     background-color: var(--white);
-    margin: 30px auto;
-    max-width: 1100px;
+    margin: 20px 10px;
+    width: 100%;
+    max-width: 100%;
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
@@ -54,12 +59,12 @@ h2 {
 
 .team {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 25px;
-    justify-content: center;
     background-color: #00251d;
-    padding: 50px 20px;
+    padding: 40px 15px;
     border-radius: 12px;
+    width: 100%;
 }
 
 .team-container {
