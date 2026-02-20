@@ -6,9 +6,10 @@
 }
 
 body {
+
     font-family: 'Inter', sans-serif;
     margin: 0;
-    background-color: var(--light-bg);
+    background: linear-gradient(to bottom, #f4f7f6, #e9f1ef);
     color: #333;
 }
 
@@ -18,6 +19,8 @@ header {
     padding: 50px 20px;
     text-align: center;
 }
+
+
 
 header h1 {
     margin: 0;
@@ -30,7 +33,7 @@ header p {
 }
 
 section {
-    padding: 40px;
+    padding: 40px 5%;
     background-color: var(--white);
     margin: 30px auto;
     max-width: 1100px;
@@ -61,10 +64,9 @@ h2 {
 
 .team-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    max-width: 1200px;
-    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    padding: 60px 5%;
  }
 
 .team-member {
@@ -174,4 +176,64 @@ footer {
 @keyframes fadeIn {
     from { opacity: 0; transform: scale(0.9); }
     to { opacity: 1; transform: scale(1); }
+}
+
+
+
+/* GLOBAL FIX */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+    section {
+        padding: 25px 5%;
+        margin: 20px 10px;
+    }
+
+    .team {
+        padding: 30px 15px;
+    }
+
+    .team-member {
+        padding: 20px 15px;
+    }
+
+    .team-member img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .modal-content {
+        padding: 25px 20px;
+    }
+
+    header {
+        padding: 35px 15px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
 }
