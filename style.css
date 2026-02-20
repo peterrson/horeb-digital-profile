@@ -1,0 +1,177 @@
+:root {
+    --primary-color: #00251d;
+    --accent-color: #014d3b;
+    --light-bg: #f4f7f6;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background-color: var(--light-bg);
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #00251d, #014d3b);
+    color: var(--white);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+section {
+    padding: 40px;
+    background-color: var(--white);
+    margin: 30px auto;
+    max-width: 1100px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.team h2 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    background-color: #00251d;
+    padding: 50px 20px;
+    border-radius: 12px;
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+ }
+
+.team-member {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 30px 20px;
+    transition: 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+ }
+
+.team-member:hover {
+    transform: translateY(-10px);
+    border: 1px solid #00c896;
+    box-shadow: 0 15px 35px rgba(0, 200, 150, 0.3);
+}
+
+.team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 20px auto;
+    border: 3px solid #00c896;
+}
+
+.team-member h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.team-member p {
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+.portfolio ul {
+    list-style: none;
+    padding: 0;
+}
+
+.portfolio li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    margin-top: 40px;
+}
+
+/* MODAL BACKGROUND */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+}
+
+/* MODAL CONTENT */
+.modal-content {
+    background: #00251d;
+    padding: 40px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    color: white;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid #00c896;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #00c896;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
